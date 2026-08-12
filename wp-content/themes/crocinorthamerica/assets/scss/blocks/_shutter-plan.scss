@@ -1,0 +1,55 @@
+.shutter-plans {
+    h2.title, h3.title {
+        display: flex;
+        @media only screen and (max-width: 575px) {
+            margin-bottom: 20px;
+        }
+    }
+    .plan-views {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(4, 1fr);
+        @media only screen and (min-width: 768px) and (max-width: 1199px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media only screen and (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
+        .plan-view {
+            position: relative;
+            padding: 15px;
+            border: 1px solid $grey;
+            text-align: center;
+            h4 {
+                font-size: 18px;
+                color: $red;
+                margin-bottom: 5px;
+            }
+            &:hover {
+                .hover, svg.icon {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    svg.icon, .hover {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(.8);
+        transition: all .4s ease-in-out;
+    }
+    .hover {
+        height: 65px;
+        width: 65px;
+        background-color: $red;
+        border-radius: 100px;
+        mix-blend-mode: multiply;
+    }   
+}

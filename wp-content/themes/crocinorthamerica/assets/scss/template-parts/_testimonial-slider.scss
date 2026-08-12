@@ -1,0 +1,15 @@
+.testimonial-section {
+  position: relative;
+  .slider-nav {
+    top: 40%;
+    outline: none;
+  }
+  .test-next {
+    right: 0;
+    cursor: pointer;
+  }
+  .test-prev {
+    left: 0;
+    cursor: pointer;
+  }
+}
