@@ -1,0 +1,45 @@
+.product-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 400px) {
+        gap: 15px;
+    }
+    .product-card {
+        padding: 30px;
+        border: 1px solid $grey;
+        width: 370px;
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            width: 45%;
+        }
+        @media only screen and (max-width: 400px) {
+            width: 100%;
+            padding: 15px;
+        }
+        &.small {
+            @media only screen and (min-width: 992px) {
+                min-height: 340px;
+            }
+        }
+        &:not(.small) {
+            @media only screen and (min-width: 992px) {
+                min-height: 505px;
+            }
+            p.sub {
+                margin-bottom: 15px;
+            }
+        }
+        img {
+            margin-bottom: 30px;
+        }
+        h4 {
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        p.sub {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+    }
+}

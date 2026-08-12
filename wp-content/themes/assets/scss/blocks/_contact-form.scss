@@ -1,0 +1,106 @@
+.contact-form {
+    background: white;
+    padding: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    @media only screen and (max-width: 575px) {
+        padding: 50px 15px;
+    }
+    h4 {
+        color: $black;
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+    .input-wrapper {
+        position: relative;
+        display: flex;
+        margin-bottom: 10px;
+        &.focus {
+            outline: none;
+            .label {
+                font-size: 12px;
+                color: $dark;
+                top: 5px;
+                font-weight: 600;
+            }
+        }
+    }
+    .form-control {
+        padding-left: 20px;
+        padding-top: 18px;
+        padding-bottom: 8px;
+        font-size: 14px;
+        box-sizing: border-box;
+        border-bottom: 2px solid $pink;
+    }
+    input.form-control {
+        height: 50px;
+    }
+    textarea.form-control {
+        height: 92px;
+        padding-top: 20px;
+    }
+    h2 {
+        color: $dark;
+        margin-bottom: 30px;
+        @include responsive-font-size(48px);
+        @include media-breakpoint-up(md) {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+    }
+    .label {
+        font-size: 16px;
+        background: transparent;
+        top: 13px;
+        left: 20px;
+        color: #7B8198;
+        position: absolute;
+        pointer-events: none;
+        transition: all 0.2s ease-in-out;
+    }
+    input, textarea {
+        background: $light!important;
+        border: none;
+        resize: none;
+    }
+    form::placeholder {
+        color: $light;
+        font-size: 14px;
+    }
+    textarea {
+        min-height: 100px;
+    }
+    .desired-treatments {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        .checkbox {
+            color: $black;
+            @media only screen and (max-width: 399px) {
+                font-size: 15px;
+            }
+        }
+        p {
+            color: $black;
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        @media only screen and (min-width: 600px) and (max-width: 849px) {
+            .col-6 {
+                max-width: 265px;
+            }
+        }
+    }
+    .btn2 {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+.form-control {
+    &:focus {
+        box-shadow: none;
+        background-color: $light;
+    }
+}

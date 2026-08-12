@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'custom-icons';
+  src: url('../fonts/custom-icons.eot?u781ox');
+  src: url('../fonts/custom-icons.eot?u781ox#iefix') format('embedded-opentype'),
+    url('../fonts/custom-icons.ttf?u781ox') format('truetype'),
+    url('../fonts/custom-icons.woff?u781ox') format('woff'),
+    url('../fonts/custom-icons.svg?u781ox#custom-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="custom-icon-"],
+[class*=" custom-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'custom-icons' !important;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-icon-avvo:before {
+  content: "\e900";
+}
+
+.custom-icon-justia:before {
+  content: "\e901";
+}
+
+.custom-icon-onthemap:before {
+  content: "\e902";
+}

@@ -1,0 +1,45 @@
+.sidebar {
+  .calendar_wrap {
+    caption {
+      text-align: center;
+      padding: 5px;
+      background: $primary;
+      color: $secondary;
+      font-weight: 700;
+      caption-side: top;
+    }
+    table {
+      width: 100%;
+      text-align: center;
+      thead {
+        background-color: $secondary;
+        color: $primary;
+        th {
+          padding: 5px 0;
+        }
+      }
+      tbody {
+        background-color: $white;
+        a {
+          color: $secondary;
+          font-weight: 700;
+        }
+      }
+      tfoot {
+        a {
+          padding: 5px;
+          background: $primary;
+          color: $secondary;
+          font-weight: 700;
+          width: 100%;
+          display: block;
+          transition: all ease-in-out .3s;
+          &:hover {
+            color: $white;
+            background: $secondary;
+          }
+        }
+      }
+    }
+  }
+}

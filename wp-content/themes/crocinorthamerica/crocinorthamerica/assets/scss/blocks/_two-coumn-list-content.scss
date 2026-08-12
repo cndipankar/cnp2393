@@ -1,0 +1,52 @@
+.tclc {
+    h2, h3 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        position: relative;
+        @media only screen and (max-width: 575px) {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        span {
+            color: $red;
+        }
+    }
+    .content {
+        @media only screen and (min-width: 992px) {
+            width: 370px;
+        }
+        p {
+            margin-bottom: 30px;
+            @media only screen and (max-width: 575px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    @media only screen and (max-width: 991px) {
+        .col-12:first-child {
+            margin-bottom: 30px;
+        }
+    }
+    .list-content {
+        ul {
+            list-style: none;
+            padding-left: 30px;
+            margin-bottom: 0;
+            li::before {
+              content: url("data:image/svg+xml,%3Csvg width='20' height='18' viewBox='0 0 20 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5 3L7 15L2.5 10.5' stroke='%23E10915' stroke-width='3' stroke-miterlimit='10' stroke-linecap='square'/%3E%3C/svg%3E%0A");
+              display: inline-block;
+              width: 1em;
+              margin-left: -1.1em;
+              transform: translate(-12px, 5px);
+            }
+            li {
+                strong {
+                    font-weight: 700;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

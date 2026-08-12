@@ -1,0 +1,120 @@
+/*
+|--------------------------------------------------------------------------
+| Header
+|--------------------------------------------------------------------------
+*/
+
+.frame-logo {
+  max-width: 300px;
+  max-height: 100px;
+  height: auto;
+}
+
+.csf-theme-light .csf-expand-all i {
+  margin-right: 0!important;
+}
+
+.csf-header-inner h1 {
+  line-height: 1.1;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Footer
+|--------------------------------------------------------------------------
+*/
+
+.csf-options .far,
+.csf-options .fas,
+.csf-options .fab {
+	width: 20px;
+  margin-right: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.csf-field-group .csf-cloneable-header-icon {
+	vertical-align: text-bottom;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Datepicker
+|--------------------------------------------------------------------------
+*/
+
+.csf-datepicker-wrapper .ui-datepicker-prev, .csf-datepicker-wrapper .ui-datepicker-next {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Metabox Styling
+|--------------------------------------------------------------------------
+*/
+
+.edit-post-layout__metaboxes .csf-theme-dark .csf-section-title {
+  background-color: #fff;
+}
+
+.edit-post-layout__metaboxes .csf-theme-dark .csf-section-title h3 {
+  color: #262c33;
+}
+
+.edit-post-layout__metaboxes .csf-nav-background {
+  background-color: #fff;
+}
+
+.edit-post-layout__metaboxes .csf-nav-options {
+  border-bottom: 1px solid #e2e4e7;
+}
+
+.edit-post-layout__metaboxes .csf-nav ul li a {
+  color: #666;
+  background-color: #fff;
+  border-bottom: 1px solid #e2e4e7;
+}
+
+.edit-post-layout__metaboxes .csf-nav ul li a:hover {
+  color: #525252;
+}
+
+.edit-post-layout__metaboxes .csf-nav ul li .csf-section-active,
+.edit-post-layout__metaboxes .csf-nav ul ul li .csf-section-active {
+  color: #222;
+  background: #fff;
+  font-weight: 700;
+}
+
+.edit-post-layout__metaboxes .csf-nav ul ul:before {
+  background: transparent;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Chosen jQuery
+|--------------------------------------------------------------------------
+*/
+
+.csf-field .chosen-container {
+  width: 100% !important;
+  max-width: 340px;
+}
+.csf-field .chosen-container .chosen-single {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+  background-color: #fff;
+  color: #32373c;
+  outline: 0;
+  transition: 50ms border-color ease-in-out;
+}
+.csf-field .chosen-container-single .chosen-single abbr,
+.csf-field .chosen-container-multi .chosen-choices li.search-choice .search-choice-close,
+.csf-field .chosen-container-single .chosen-single div b,
+.csf-field .chosen-container-single .chosen-search:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}

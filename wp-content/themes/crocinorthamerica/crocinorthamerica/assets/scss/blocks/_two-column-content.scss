@@ -1,0 +1,90 @@
+.tcc {
+    h2, h3 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        position: relative;
+        @media only screen and (max-width: 575px) {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        span {
+            color: $red;
+        }
+        span.marker {
+            display: inline-block;
+            height: 33px;
+            transform: translateY(5px);
+            margin-right: 10px;
+            &::before {
+                content: url("data:image/svg+xml,%3Csvg width='24' height='33' viewBox='0 0 24 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.97921 0.500022L23.1775 16.5L8.97921 32.5L-0.000366211 32.5L14.5214 16.5L-0.000366211 0.5L8.97921 0.500022Z' fill='%23E10915'/%3E%3C/svg%3E");
+            }
+            @media only screen and (max-width: 575px) {
+                content: url("data:image/svg+xml,%3Csvg width='18' height='24' viewBox='0 0 18 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.85938 1.63973e-05L17.5081 12L6.85938 24L0.124695 24L11.016 12L0.124695 0L6.85938 1.63973e-05Z' fill='%23E10915'/%3E%3C/svg%3E");
+                transform: translateY(4px);
+                height: 24px;
+            }
+        }
+    }
+    .content {
+        @media only screen and (min-width: 992px) {
+            max-width: 465px;
+        }
+    }
+    @media only screen and (max-width: 991px) {
+        .col-12:first-child {
+            margin-bottom: 30px;
+        }
+    }
+    .img-wrapper {
+        position: relative;
+        @media only screen and (max-width: 991px) {
+            width: 100%;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .overlay {
+        background-color: white;
+        width: 430px;
+        position: absolute;
+        left:23px;
+        bottom: 0;
+        padding: 30px 35px 0 35px;
+        @media only screen and (min-width: 401px) and (max-width: 575px) {
+            width: fit-content;
+            max-width: calc(100% - 20px);
+            left: 20px;
+            padding: 15px 15px 0 15px;
+        }
+        @media only screen and (max-width: 400px) {
+            width: fit-content;
+            max-width: calc(100% - 20px);
+            left: 20px;
+            padding: 15px 0 0 15px;
+        }
+        h4 {
+            margin-bottom: 0;
+            @include responsive-font-size(18px);
+            font-weight: 600;
+            line-height: 1.25;
+            @media only screen and (max-width: 575px) {
+                font-size: 16px;
+                width: fit-content;
+            }
+            @media only screen and (max-width: 400px) {
+                font-size: 15px;
+                width: fit-content;
+            }
+        }
+        span {
+            background: linear-gradient(90deg, $red 0%, $red 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 70%;
+            background-position: 0 50%;
+            color: white;
+            position: relative;
+        }
+    }
+}

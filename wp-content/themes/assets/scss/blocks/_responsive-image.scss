@@ -1,0 +1,17 @@
+.res-img {
+    @media (max-width: 767px) {
+      .full {
+        display: none;
+      }
+      /* .mob {
+        img {
+          margin-bottom: 30px;
+        }
+      } */
+    }
+    @media (min-width: 768px) {
+      .mob {
+        display: none;
+      }
+    }
+}

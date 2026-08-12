@@ -1,0 +1,17 @@
+/*!
+ * Custom Theme Style
+ */
+.editor-styles-wrapper {
+  font-family: 'sans-serif'; }
+
+h1 {
+  font-size: 3rem; }
+
+.wp-block {
+  max-width: 1140px;
+  font-family: 'sans-serif'; }
+
+.editor-post-title__input {
+  font-family: 'sans-serif'; }
+
+/*# sourceMappingURL=sourcemaps/editor-style.css.map */

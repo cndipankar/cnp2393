@@ -1,0 +1,17 @@
+@mixin background-image($image, $repeat:no-repeat, $position:center, $size:cover) {
+  .webp & {
+    background: url('../img/backgrounds/#{$image}-mob.webp') #{$repeat} #{$position} / #{$size};
+
+    @include media-breakpoint-up(sm) {
+      background: url('../img/backgrounds/#{$image}.webp') #{$repeat} #{$position} / #{$size};
+    }
+  }
+
+  .no-webp & {
+    background: url('../img/backgrounds/#{$image}-mob.jpg') #{$repeat} #{$position} / #{$size};
+
+    @include media-breakpoint-up(sm) {
+      background: url('../img/backgrounds/#{$image}.jpg') #{$repeat} #{$position} / #{$size};
+    }
+  }
+}

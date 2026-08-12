@@ -1,0 +1,67 @@
+img.authority-logo {
+    margin-bottom: 30px;
+    @media only screen and (max-width: 575px) {
+        margin-bottom: 15px;
+    }
+}
+.download-section {
+    @media only screen and (max-width: 575px) {
+        padding-inline: 15px;
+    }
+}
+.download-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 575px) {
+        gap: 15px;
+    }
+    .download-card {
+        padding: 30px;
+        border: 1px solid $grey;
+        box-sizing: border-box;
+        width: fit-content;
+        text-align: center;
+        @media only screen and (max-width: 575px) {
+            width: 100%;
+        }
+        .img-wrapper {
+            width: 310px;
+            height: 200px;
+            margin-bottom: 30px;
+            @media only screen and (max-width: 575px) {
+                margin-bottom: 15px;
+                width: auto;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        h5 {
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 5px;
+            max-width: 310px;
+            margin-inline: auto;
+            &.no-sub {
+                margin-bottom: 30px;
+                @media only screen and (max-width: 575px) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        p {
+            margin-bottom: 30px;
+            max-width: 310px;
+            margin-inline: auto;
+            @media only screen and (max-width: 575px) {
+                margin-bottom: 15px;
+            }
+        }
+        a.txt-btn {
+            margin-inline: auto;
+        }
+    }
+}

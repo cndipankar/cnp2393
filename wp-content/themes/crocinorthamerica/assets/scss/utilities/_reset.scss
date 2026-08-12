@@ -1,0 +1,30 @@
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  color: $secondary;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a:not(.btn) {
+  color: $secondary;
+}
+
+.easing {
+  transition: all ease-in-out .3s;
+}
+
+.easing1s {
+  transition: all ease-in-out 1s;
+}
+
+.bg-none {
+  background: none;
+}
