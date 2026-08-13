@@ -32,3 +32,6 @@
 #add-all-to-cart-btn.add-all-btn-floating{position:fixed!important;bottom:24px;right:24px;float:none!important;margin:0!important;padding:0!important;width:52px!important;height:52px!important;min-width:0!important;border-radius:50%!important;box-shadow:0 2px 10px rgba(0,0,0,.35);z-index:1000;overflow:hidden;transition:box-shadow .15s ease;}
 #add-all-to-cart-btn.add-all-btn-floating::before{width:22px;height:22px;margin-right:0;}
 #add-all-to-cart-btn.add-all-btn-floating::after{display:none;}
+
+/* Product name in the single-product configurator (Finished Products menu) should not navigate away to the product page */
+.b2bking_bulkorder_container_final .b2bking_bulkorder_cream_name{pointer-events:none!important;cursor:default!important;}
