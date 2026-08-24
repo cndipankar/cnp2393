@@ -196,6 +196,24 @@
 			fetchCart().done(updateCartBadge);
 		});
 
+		$(document).ajaxSend(function (event, xhr, settings) {
+			if (!settings.data || settings.data.indexOf('action=b2bking_ajax_search') === -1) {
+				return;
+			}
+
+			var requestData = typeof settings.data === 'string' ? settings.data : $.param(settings.data);
+			var params = new URLSearchParams(requestData);
+			var searchValue = params.get('searchValue');
+			var hasSearchValue = searchValue && $.trim(searchValue) !== '';
+			var $bulkOrderHeader = $('.b2bking_bulkorder_form_container_top_indigo.b2bking_bulkorder_form_container_top_cream');
+
+			if (hasSearchValue) {
+				$bulkOrderHeader.fadeOut(100);
+			} else {
+				$bulkOrderHeader.fadeIn(100);
+			}
+		});
+
 		// Fetch the live cart (WooCommerce's own Store API - no custom endpoint needed)
 		// and, for every part card currently rendered, check its box / highlight it /
 		// fill in its real cart quantity if that product is already in the cart, or
