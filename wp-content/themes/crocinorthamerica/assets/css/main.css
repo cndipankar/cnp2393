@@ -21185,3 +21185,51 @@ img.authority-logo {
   background-color: #E10915;
   border-radius: 100px;
   mix-blend-mode: multiply; }
+
+/* Parts & Components selected card state */
+.part-item-selected {
+  background: #fff8f8 !important;
+  border: 1px solid rgba(225, 9, 21, 0.35) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 22px rgba(225, 9, 21, 0.12), 0 0 0 1px rgba(225, 9, 21, 0.08) !important;
+}
+
+.part-item-selected > .part-box-right > input[type="checkbox"],
+.part-item-selected input[type="checkbox"]:first-of-type {
+  accent-color: #E10915;
+  width: 18px;
+  height: 18px;
+}
+
+.part-item-selected .part-box-right h4,
+.part-item-selected .part-box-right h3 {
+  color: #171411;
+  font-weight: 700;
+}
+
+.part-item-selected .part-box-right p {
+  color: #333130;
+}
+
+.part-item-selected .cpa-product-fields label {
+  color: #171411;
+  font-weight: 700;
+}
+
+.part-item-selected .cpa-product-fields select,
+.part-item-selected .cpa-product-fields input,
+.part-item-selected .b2bking_cream_input_group {
+  border-color: #dcdcdc !important;
+}
+
+.b2bking_orderform_cart:hover:not(.b2bking_orderform_cart_inactive),
+.b2bking_orderform_carticon:hover:not(.b2bking_orderform_carticon_inactive) {
+  background: rgb(0 0 0 / 52%) !important;
+}
+
+.finished-product-row .parts-products {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+    margin-top: 11px;
+}
