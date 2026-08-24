@@ -21261,6 +21261,18 @@ img.authority-logo {
   border-color: #dcdcdc !important;
 }
 
+.part-item {
+  cursor: pointer;
+}
+
+.part-item input,
+.part-item select,
+.part-item textarea,
+.part-item button,
+.part-item .b2bking_cream_input_group {
+  cursor: auto;
+}
+
 .b2bking_orderform_cart:hover:not(.b2bking_orderform_cart_inactive),
 .b2bking_orderform_carticon:hover:not(.b2bking_orderform_carticon_inactive) {
   background: rgb(0 0 0 / 52%) !important;

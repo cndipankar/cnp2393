@@ -156,6 +156,20 @@
 			$(this).closest('.part-item').toggleClass('part-item-selected', this.checked);
 		});
 
+		$(document).on('click', '.part-item', function (event) {
+			if ($(event.target).closest('input, select, textarea, button, label, .b2bking_cream_input_group').length) {
+				return;
+			}
+
+			var $checkbox = $(this).find('input[type="checkbox"]').first();
+
+			if (!$checkbox.length) {
+				return;
+			}
+
+			$checkbox.prop('checked', !$checkbox.prop('checked')).trigger('change');
+		});
+
 		// Both b2bking (core) and custom-b2b register a PHP handler for the exact same
 		// action "b2bking_bulkorder_add_multiple" - whichever runs first calls
 		// wp_die()/exit() and the browser gets that response, so which of the two
