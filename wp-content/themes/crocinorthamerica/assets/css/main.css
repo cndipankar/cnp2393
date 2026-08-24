@@ -21206,7 +21206,7 @@ img.authority-logo {
 
 /* "Add all selected items to Order": stays in its normal place (below the last
    .finished-product-row, full icon+label) until scrolled out of view, then
-   scripts.js adds .add-all-btn-floating and it docks bottom-right, icon only.
+   scripts.js adds .add-all-btn-floating and it docks bottom-right.
    The plugin's own click handler does .text('Adding...') / .text('Add all selected
    items to Order') around every add-to-cart request - jQuery's .text() replaces ALL
    child nodes, which permanently destroys the real <img> icon the very first time the
@@ -21217,10 +21217,10 @@ img.authority-logo {
 #add-all-to-cart-btn{position:relative;color:transparent!important;font-size:0!important;line-height:0!important;}
 #add-all-to-cart-btn img{visibility:hidden!important;position:absolute!important;}
 #add-all-to-cart-btn::before{content:"";display:inline-block;vertical-align:middle;width:18px;height:18px;margin-right:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath fill='%23fff' d='M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM288 176c0 8.8 7.2 16 16 16h48v48c0 8.8 7.2 16 16 16s16-7.2 16-16V192h48c8.8 0 16-7.2 16-16s-7.2-16-16-16H384V112c0-8.8-7.2-16-16-16s-16 7.2-16 16v48H304c-8.8 0-16 7.2-16 16z'/%3E%3C/svg%3E") no-repeat center/contain;}
-#add-all-to-cart-btn::after{content:"Add all selected items to Order";display:inline-block;vertical-align:middle;font-size:16px;line-height:normal;font-weight:600;color:#fff;}
-#add-all-to-cart-btn.add-all-btn-floating{position:fixed!important;bottom:24px;right:24px;float:none!important;margin:0!important;padding:0!important;width:52px!important;height:52px!important;min-width:0!important;border-radius:50%!important;box-shadow:0 2px 10px rgba(0,0,0,.35);z-index:1000;overflow:hidden;transition:box-shadow .15s ease;}
-#add-all-to-cart-btn.add-all-btn-floating::before{width:22px;height:22px;margin-right:0;}
-#add-all-to-cart-btn.add-all-btn-floating::after{display:none;}
+#add-all-to-cart-btn::after{content:"Add all selected items to Order";display:inline-block;vertical-align:middle;font-size:14px;line-height:normal;font-weight:600;color:#fff;}
+#add-all-to-cart-btn.add-all-btn-floating{position:fixed!important;bottom:24px;right:24px;float:none!important;margin:0!important;padding:14px 24px!important;width:auto!important;height:auto!important;min-width:0!important;border-radius:6px!important;box-shadow:0 2px 10px rgba(0,0,0,.35);z-index:1000;overflow:hidden;transition:box-shadow .15s ease;}
+#add-all-to-cart-btn.add-all-btn-floating::before{width:22px;height:22px;margin-right:10px;}
+#add-all-to-cart-btn.add-all-btn-floating::after{display:inline-block;}
 
 /* Product name in the single-product configurator (Finished Products menu) should not navigate away to the product page */
 .b2bking_bulkorder_container_final .b2bking_bulkorder_cream_name{pointer-events:none!important;cursor:default!important;}
