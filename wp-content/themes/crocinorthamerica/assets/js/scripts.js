@@ -351,6 +351,9 @@
 				}
 			};
 
+
+		
+
 			var addAllBtnObserver = null;
 
 			var wireAddAllButton = function () {
