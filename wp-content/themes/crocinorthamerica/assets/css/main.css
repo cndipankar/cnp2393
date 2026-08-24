@@ -21272,3 +21272,12 @@ img.authority-logo {
     gap: 9px;
     margin-top: 11px;
 }
+.parts-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.parts-products .part-item {
+    flex: 0 0 calc(48% - 10px);
+    box-sizing: border-box;
+}
