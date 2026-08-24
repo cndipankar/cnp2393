@@ -13,7 +13,7 @@
 .part-item>.part-box-right>input[type="checkbox"]{position:absolute!important;top:8px!important;right:8px!important;left:auto!important;margin:0!important;z-index:2!important;}
 
 /* Selected part card highlight (toggled in scripts.js on checkbox change) */
-.part-item.part-item-selected{border-color:#e10915!important;box-shadow:0 0 0 2px rgba(225,9,21,.15);}
+.part-item.part-item-selected{border-color:#e10915!important;}
 
 /* "Add all selected items to Order": stays in its normal place (below the last
    .finished-product-row, full icon+label) until scrolled out of view, then
@@ -35,5 +35,5 @@
 
 /* Product name in the single-product configurator (Finished Products menu) should not navigate away to the product page */
 .b2bking_bulkorder_container_final .b2bking_bulkorder_cream_name{pointer-events:none!important;cursor:default!important;}
-.part-item-selected{background:#fff8f8!important;border:1px solid rgba(225,9,21,.35)!important;border-radius:8px!important;box-shadow:0 8px 22px rgba(225,9,21,.12),0 0 0 1px rgba(225,9,21,.08)!important}.part-item-selected>.part-box-right>input[type=checkbox],.part-item-selected input[type=checkbox]:first-of-type{accent-color:#e10915;width:18px;height:18px}.part-item-selected .part-box-right h4,.part-item-selected .part-box-right h3{color:#171411;font-weight:700}.part-item-selected .part-box-right p{color:#333130}.part-item-selected .cpa-product-fields label{color:#171411;font-weight:700}.part-item-selected .cpa-product-fields select,.part-item-selected .cpa-product-fields input,.part-item-selected .b2bking_cream_input_group{border-color:#dcdcdc!important}
+.part-item-selected{background:#fff8f8!important;border:1px solid rgba(225,9,21,.35)!important;border-radius:8px!important;}.part-item-selected>.part-box-right>input[type=checkbox],.part-item-selected input[type=checkbox]:first-of-type{accent-color:#e10915;width:18px;height:18px}.part-item-selected .part-box-right h4,.part-item-selected .part-box-right h3{color:#171411;font-weight:700}.part-item-selected .part-box-right p{color:#333130}.part-item-selected .cpa-product-fields label{color:#171411;font-weight:700}.part-item-selected .cpa-product-fields select,.part-item-selected .cpa-product-fields input,.part-item-selected .b2bking_cream_input_group{border-color:#dcdcdc!important}
 .b2bking_orderform_cart:hover:not(.b2bking_orderform_cart_inactive),.b2bking_orderform_carticon:hover:not(.b2bking_orderform_carticon_inactive){background:rgb(0 0 0 / 52%)!important}

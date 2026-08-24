@@ -196,23 +196,7 @@
 			fetchCart().done(updateCartBadge);
 		});
 
-		$(document).ajaxSend(function (event, xhr, settings) {
-			if (!settings.data || settings.data.indexOf('action=b2bking_ajax_search') === -1) {
-				return;
-			}
 
-			var requestData = typeof settings.data === 'string' ? settings.data : $.param(settings.data);
-			var params = new URLSearchParams(requestData);
-			var searchValue = params.get('searchValue');
-			var hasSearchValue = searchValue && $.trim(searchValue) !== '';
-			var $bulkOrderHeader = $('.b2bking_bulkorder_form_container_top_indigo.b2bking_bulkorder_form_container_top_cream');
-
-			if (hasSearchValue) {
-				$bulkOrderHeader.fadeOut(100);
-			} else {
-				$bulkOrderHeader.fadeIn(100);
-			}
-		});
 
 		// Fetch the live cart (WooCommerce's own Store API - no custom endpoint needed)
 		// and, for every part card currently rendered, check its box / highlight it /
@@ -236,11 +220,8 @@
 					var $qty = $item.find('.b2bking_bulkorder_form_container_content_line_qty').first();
 					var inCart = Object.prototype.hasOwnProperty.call(cartQty, productId);
 
-					// Card is marked selected and shows the real cart qty, but the
-					// checkbox itself stays unchecked - checking it is what re-adds
-					// it via "Add all selected items to Order", so a product already
-					// in the cart shouldn't come back pre-armed to be re-added.
-					$checkbox.prop('checked', false);
+					// Product already in the cart should look and behave selected.
+					$checkbox.prop('checked', inCart);
 					$item.toggleClass('part-item-selected', inCart);
 					$qty.val(inCart ? cartQty[productId] : 0);
 				});
@@ -420,7 +401,7 @@
 			// transient "Loading parts..." swap doesn't trigger a redundant pass.
 			var refreshTimer = null;
 			var refreshPartsUI = function () {
-				transformSearchResultsToCards();
+				//transformSearchResultsToCards();
 				wireAddAllButton();
 				syncPartCardsWithCart();
 			};
