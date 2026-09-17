@@ -37,26 +37,6 @@ class Miscellaneous_Modifications {
         add_filter( 'init', array( $this, 'remove_checkout_order_review' ) );    
     }
     
-    /**
-     * Subscriber + "B2C Users" customer group (i.e. a regular, non-B2B WordPress
-     * `subscriber` account - the same convention already used to detect B2C users
-     * in Override_Bulkorder_Shortcode::custom_bulkorder_shortcode_content()).
-     * Used to extend the admin-only Bulk Order / Quote Request access below to
-     * this specific group without touching any other role or customer group.
-     */
-    private function cnp_is_subscriber_b2c_user() {
-        if (!is_user_logged_in()) {
-            return false;
-        }
-
-        $user = wp_get_current_user();
-        if (!in_array('subscriber', (array) $user->roles, true)) {
-            return false;
-        }
-
-        return get_user_meta($user->ID, 'b2bking_b2buser', true) !== 'yes';
-    }
-
     public function remove_checkout_order_review() {
         remove_action(
             'woocommerce_checkout_order_review',
@@ -203,15 +183,6 @@ class Miscellaneous_Modifications {
             return;
         }
 
-        // Allow subscriber + B2C Users to reach the Bulk Order (Order Form) page specifically;
-        // every other My Account page/endpoint stays admin-only for them.
-        if ($this->cnp_is_subscriber_b2c_user() && function_exists('is_wc_endpoint_url')) {
-            $bulkorder_endpoint = get_option('b2bking_bulkorder_endpoint_setting', 'bulkorder');
-            if (is_wc_endpoint_url($bulkorder_endpoint)) {
-                return;
-            }
-        }
-
         // Not logged in → redirect to login
         if (!is_user_logged_in()) {
             wp_redirect(wp_login_url(get_permalink()));
@@ -231,25 +202,19 @@ class Miscellaneous_Modifications {
         if (is_user_logged_in() && current_user_can('administrator')) {
             $classes[] = 'admin-logged-in';
         }
-
-        if ($this->cnp_is_subscriber_b2c_user()) {
-            $classes[] = 'cnp-b2c-quote-access';
-        }
-
         return $classes;
     }
-
-    public function admin_only_quote_section_css() {
+    
+    public function admin_only_quote_section_css() {    
         echo '<style>
-
+        
         /* hide by default for everyone */
         .quote_request_section{
             display:none !important;
         }
 
-        /* show only if admin logged in, or a subscriber + B2C Users customer */
-        body.admin-logged-in .quote_request_section,
-        body.cnp-b2c-quote-access .quote_request_section{
+        /* show only if admin logged in */
+        body.admin-logged-in .quote_request_section{
             display:block !important;
         }
 

@@ -32,6 +32,7 @@ class Custom_B2B_Feature {
     }  
 
     public function enqueue_styles() {
+        $b2b_plugin_version = '1.0.0';
         // Plugin CSS file path
         wp_enqueue_style(
             'my-plugin-style', 
